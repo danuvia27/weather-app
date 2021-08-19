@@ -1,0 +1,110 @@
+h1 {
+  text-align: center;
+  color: #1d61d7;
+  font-family: "Roboto Slab", serif;
+  font-size: 50px;
+  position: relative;
+  left: 30px;
+}
+h2 {
+  text-align: center;
+  font-size: 40px;
+  position: relative;
+  left: 30px;
+  color: #333333;
+}
+
+h3 {
+  text-align: center;
+  font-size: 18px;
+  position: relative;
+  left: 30px;
+}
+p {
+  text-align: center;
+  font-size: 12px;
+  font-family: "Roboto Mono", monospace;
+  color: #333333;
+  position: relative;
+  right: 50px;
+  top: 30px;
+}
+.card-group {
+  width: 800px;
+}
+
+.form-control {
+  width: 330px;
+  position: relative;
+  left: 200px;
+  bottom: 5px;
+  box-shadow: 1px 1px 1px #000;
+}
+
+.table {
+  width: 730px;
+  padding-left: 50px;
+  text-align: center;
+  position: relative;
+  top: 40px;
+}
+
+.row {
+  color: #333333;
+  position: relative;
+  left: 40px;
+  bottom: 20px;
+}
+
+.cloud-icon {
+  color: gray;
+  font-size: 18px;
+  position: relative;
+}
+
+.search-button {
+  position: relative;
+  left: 539px;
+  bottom: 43px;
+  background-color: #1d61d7;
+  box-shadow: 1px 1px 1px #000;
+}
+.tab {
+  margin-left: 2.5;
+}
+.weekdays {
+  color: #1d61d7;
+  font-family: "Roboto Slab", serif;
+}
+.highs-lows {
+  color: gray;
+  font-family: "Roboto Slab", serif;
+}
+
+.vertical-line {
+  display: inline-block;
+  border-left: 1px solid #ccc;
+  margin: 0 5px;
+  height: 125px;
+  position: relative;
+  left: 412px;
+  bottom: 130px;
+}
+.conditions {
+  position: relative;
+  left: 150px;
+  bottom: 60px;
+}
+
+ul {
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  left: 20px;
+}
+.current-button {
+  position: relative;
+  left: 550px;
+  bottom: 42px;
+  box-shadow: 1px 1px 1px #000;
+}
