@@ -22,14 +22,21 @@ dateElement.innerHTML = formatDate(currentTime);
 
 //search weather engine
 function cityTemprature(response) {
-  console.log(response.data);
-  document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temprature").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
+  let cityElement = document.querySelector("#city");
+  let tempratureElement = document.querySelector("#temprature");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = (document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
+  ));
+  let iconELement = document.querySelector("#icon");
+
+  cityElement.innerHTML = response.data.name;
+  tempratureElement.innerHTML = Math.round(response.data.main.temp);
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  iconELement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
 
