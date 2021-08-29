@@ -31,8 +31,10 @@ function cityTemprature(response) {
   ));
   let iconELement = document.querySelector("#icon");
 
+  celsiusTemprature = response.data.main.temp;
+
   cityElement.innerHTML = response.data.name;
-  tempratureElement.innerHTML = Math.round(response.data.main.temp);
+  tempratureElement.innerHTML = Math.round(celsiusTemprature);
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
@@ -54,7 +56,28 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
+function displayFahrenheitTemprature(event) {
+  event.preventDefault();
+  let fahrenheitTemprature = (celsiusTemprature * 9) / 5 + 32;
+  let tempratureElement = document.querySelector("#temprature");
+  tempratureElement.innerHTML = Math.round(fahrenheitTemprature);
+}
+
+function displayCelsiusTemprature(event) {
+  event.preventDefault();
+  let tempratureElement = document.querySelector("#temprature");
+  tempratureElement.innerHTML = Math.round(celsiusTemprature);
+}
+
+let celsiusTemprature = null;
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemprature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemprature);
 
 searchCity("San Diego");

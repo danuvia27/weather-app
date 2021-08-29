@@ -29,7 +29,19 @@ h2 {
   position: relative;
   bottom: 25px;
 }
-
+.active {
+  color: #333333;
+  text-decoration: none;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+}
+.current {
+  color: #333333;
+  text-decoration: none;
+  cursor: default;
+}
 h3 {
   text-align: center;
   font-size: 18px;
