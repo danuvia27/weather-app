@@ -24,6 +24,7 @@ dateElement.innerHTML = formatDate(currentTime);
 function cityTemprature(response) {
   let cityElement = document.querySelector("#city");
   let tempratureElement = document.querySelector("#temprature");
+  let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = (document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -32,6 +33,7 @@ function cityTemprature(response) {
 
   cityElement.innerHTML = response.data.name;
   tempratureElement.innerHTML = Math.round(response.data.main.temp);
+  descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   iconELement.setAttribute(
