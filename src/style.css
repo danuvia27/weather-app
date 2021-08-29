@@ -1,12 +1,15 @@
-.weather.app {
-  max-width: 500px;
+.container {
+  max-width: 828px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #dadde1;
 }
 
 h1 {
   text-align: center;
   color: #1d61d7;
   font-family: "Roboto Slab", serif;
-  font-size: 50px;
+  font-size: 60px;
   position: relative;
   left: 30px;
   margin: 50px auto;
@@ -26,6 +29,7 @@ h3 {
   font-size: 18px;
   position: relative;
   left: 30px;
+  top: 5px;
 }
 p {
   text-align: center;
@@ -113,13 +117,14 @@ ul {
   list-style-type: none;
   position: relative;
   left: 20px;
+  bottom: 25px;
 }
 
 .footer {
   text-align: left;
   position: relative;
-  top: 50px;
-  left: 350px;
+  top: 20px;
+  left: 320px;
   font-family: Dancing Script, cursive;
-  font-size: 15px;
+  font-size: 13px;
 }

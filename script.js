@@ -22,6 +22,7 @@ dateElement.innerHTML = formatDate(currentTime);
 
 //search weather engine
 function cityTemprature(response) {
+  console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temprature").innerHTML = Math.round(
     response.data.main.temp
@@ -42,11 +43,6 @@ function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#search-text-input").value;
   searchCity(city);
-}
-
-function getCurrentLocation(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
 let searchForm = document.querySelector("#search-form");
