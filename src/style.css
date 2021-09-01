@@ -3,6 +3,7 @@
   margin: 30px auto;
   padding: 20px;
   border: 1px solid #dadde1;
+  border-radius: 10px;
 }
 
 h1 {
@@ -78,17 +79,23 @@ p {
   top: 40px;
 }
 
-.row {
-  color: #333333;
-  position: relative;
-  left: 40px;
-  bottom: 20px;
+.weather-forecast {
+  margin-top: 28px;
+  text-align: center;
+  color: black;
 }
 
-.cloud-icon {
-  color: gray;
-  font-size: 18px;
-  position: relative;
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.7;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
 }
 
 .search-button {

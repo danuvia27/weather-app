@@ -20,6 +20,36 @@ let currentTime = new Date();
 
 dateElement.innerHTML = formatDate(currentTime);
 
+function displayForcast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Now", "Weds", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+       <div class="col-2">
+         <div class="weather-forecast-date">${day}</div>
+           
+           <br />
+           <i class="fas fa-cloud cloud-icon"></i>
+        <br />
+        <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max">
+           22°         
+          </span>
+          <span class="weather-forecast-temperature-min">
+          18°
+        </span>
+      </div>
+     </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 //search weather engine
 function cityTemprature(response) {
   let cityElement = document.querySelector("#city");
@@ -81,3 +111,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemprature);
 
 searchCity("San Diego");
+displayForcast();
