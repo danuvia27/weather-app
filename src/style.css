@@ -4,6 +4,8 @@
   padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 10px;
+  background-color: #e8e5e7;
+  box-shadow: 1px 1px 1px #333333;
 }
 
 h1 {
@@ -23,6 +25,14 @@ h2 {
   left: 25px;
   bottom: 35px;
   color: #333333;
+}
+
+h3 {
+  position: relative;
+  bottom: 280px;
+  font-size: 18px;
+  color: #333333;
+  font-family: "Roboto Slab", serif;
 }
 
 .unit {
